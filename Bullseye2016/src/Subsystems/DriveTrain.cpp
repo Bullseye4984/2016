@@ -43,9 +43,10 @@ void DriveTrain::InitDefaultCommand() {
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 void DriveTrain::TankDrive(std::shared_ptr<Joystick> joystick){
-	TankDrive(joystick->GetRawAxis(1), joystick->GetRawAxis(5));
+ 	TankDrive(joystick->GetRawAxis(1), joystick->GetRawAxis(5));
 
-}
-void DriveTrain::TankDrive(float left, float right){
-	driveMotors->TankDrive(left, right);
-}
+ }
+ void DriveTrain::TankDrive(float left, float right){
+ 	driveMotors->TankDrive((left *-1), right*-1);
+ }
+
