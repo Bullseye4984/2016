@@ -39,6 +39,9 @@ public:
 	void MoveKicker(std::shared_ptr<Joystick> joystick);
 	void MoveArmDown(float input);
 	void MoveArmUp(float input);
+	void MoveWheelsIn(std::shared_ptr<Joystick> joystick);
+	void MoveWheelsOut(std::shared_ptr<Joystick> joystick);
+	void StopWheels(std::shared_ptr<Joystick> joystick);
 	std::shared_ptr<SpeedController> leftWheelMotor;
 	std::shared_ptr<SpeedController> rightWheelMotor;
 

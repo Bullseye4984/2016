@@ -32,6 +32,9 @@ void MoveArmCommand::Initialize() {
 void MoveArmCommand::Execute() {
 	Robot::launcher->MoveArm(Robot::oi->getRobotOperator());
 	Robot::launcher->MoveKicker(Robot::oi->getRobotOperator());
+	Robot::launcher->StopWheels(Robot::oi->getRobotOperator());
+	Robot::launcher->MoveWheelsOut(Robot::oi->getRobotOperator());
+	Robot::launcher->MoveWheelsIn(Robot::oi->getRobotOperator());
 }
 
 // Make this return true when this Command no longer needs to run execute()
