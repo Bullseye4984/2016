@@ -47,5 +47,4 @@ Robot::launcher->StopWheels();
 // subsystems is scheduled to run
 void StartWheelsInwardCommand::Interrupted() {
 Robot::launcher->StopWheels();
-End();
 }

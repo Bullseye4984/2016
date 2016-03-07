@@ -31,8 +31,7 @@ void ShootCommand::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void ShootCommand::Execute() {
-	Robot::launcher->MoveWheelsOut();
-	Robot::launcher->wait(1);
+
 	Robot::launcher->MoveKickerUp(.75);
 	if(Robot::launcher->launcherKickerTop->Get()==false){
 		isFinished = true;
@@ -50,6 +49,7 @@ bool ShootCommand::IsFinished() {
 // Called once after isFinished returns true
 void ShootCommand::End() {
 Robot::launcher->Reset();
+Robot::launcher->StopWheels();
 }
 
 // Called when another command which requires one or more of the same
